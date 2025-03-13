@@ -1,9 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Example3 = () => {
   const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  
+  useEffect(()=>{
+    sendAPI().then((response)=>{
+        console.log("서버로부터 응답 도착");
+        setData(response);
+        setLoading(false);
+    })
+  }, []);
 
-  return <div></div>;
+  return (
+    <div>
+    {loading ? <p>로딩 중...</p> : <p>데이터 :{data.title}</p>}
+  </div>
+  );
 };
 
 const sendAPI = () => {
@@ -11,7 +24,7 @@ const sendAPI = () => {
     // 지금은 3초뒤에 데이터를 리턴하는 코드로 대신함
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve({ title : 게시판제목 });
+            resolve({ title : "게시판제목" });
         }, 3000); // 3초후에 resolve 함수를 호출함
     });
 };
