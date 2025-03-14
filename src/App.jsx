@@ -9,6 +9,10 @@ import Example4 from "./Components/2_Effect/Example4";
 import Button from "./Components/3_Props/Button";
 import { createGlobalStyle } from "styled-components";
 import Menu from "./Components/3_Props/Menu";
+import BasicRouter from "./Components/4_Router/BasicRouter";
+import ReactRouter from "./Components/4_Router/ReactRouter";
+import SendAPI from "./Components/2_Effect/SendAPI";
+
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -17,13 +21,18 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: Poppins;
   }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 `;
 
 function App() {
   return (
   <>
     <div>
-      <Menu />
+      <GlobalStyle />
+      <SendAPI />
     </div>
   </>
   );

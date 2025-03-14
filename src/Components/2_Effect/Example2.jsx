@@ -18,7 +18,7 @@ function ChildComp() {
     useEffect(()=>{
         console.log("자식 컴포넌트가 마운트됨!");
         return () => {
-            console.log("자식 컴포넌트가 언마운트됨!");
+          console.log("자식 컴포넌트가 언마운트됨!");
         };
     }, []);
 
