@@ -12,6 +12,7 @@ import Menu from "./Components/3_Props/Menu";
 import BasicRouter from "./Components/4_Router/BasicRouter";
 import ReactRouter from "./Components/4_Router/ReactRouter";
 import SendAPI from "./Components/2_Effect/SendAPI";
+import MovieListMain from "./Components/MovieList/MovieListMain";
 
 
 const GlobalStyle = createGlobalStyle`
@@ -32,7 +33,7 @@ function App() {
   <>
     <div>
       <GlobalStyle />
-      <SendAPI />
+      <MovieListMain />
     </div>
   </>
   );
